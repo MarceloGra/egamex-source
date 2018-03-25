@@ -1,0 +1,9 @@
+Building EgameX
+
+See doc/readme-qt.rst for instructions on building EgameX QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of EgameX.
+
+See doc/build-*.txt for instructions on building egamexd,
+the intended-for-services, no-graphical-interface, reference
+implementation of EgameX.
