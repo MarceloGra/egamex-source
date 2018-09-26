@@ -1,0 +1,39 @@
+Para servidores Ubuntu 18.04 
+
+Você pode compilar um daemon para o Ubuntu 18.04 usando as seguintes instruções.
+
+Atualize sua máquina Ubuntu.
+
+sudo apt-get update
+sudo apt-get upgrade
+
+Instale as dependências para compilar a partir do código-fonte.
+
+sudo apt-get install build-essential libssl-dev libdb-dev libdb++-dev libboost-all-dev git libssl1.0-dev
+sudo apt-get install libdb-dev libdb++-dev libboost-all-dev libminiupnpc-dev libevent-dev libcrypto++-dev libgmp3-dev
+
+Crie um diretório para o código-fonte.
+
+mkdir source_code
+cd source_code
+
+Baixe o código-fonte do MyCoin e faça o upload usando SCP / Filezilla. (Disponível apenas para clientes pagos)
+
+
+Importante: substitua “examplecoin” pelo nome do seu blockchain.
+
+Extraia o arquivo tar usando o seguinte comando.
+
+tar -xzvf examplecoin-source.tar.gz
+
+Vá para o diretório src do seu código-fonte.
+
+cd src
+
+Execute o seguinte comando para compilar o daemon.
+
+make -f makefile.unix RELEASE=1
+
+A compilação demora cerca de 30 minutos, dependendo do seu sistema.
+
+Seu daemon compilado chamado examplecoind pode ser encontrado na pasta src quando a compilação é concluída.
